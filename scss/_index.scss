@@ -1,0 +1,100 @@
+/* Inicio index */
+.containerProductos {
+    #dolarBlue {
+        color: nth($colores, 2);
+        text-align: center;
+        font-size:20px;
+        background-color: green;
+    }
+    .contenedorDeImagenes{
+        .subContenedorImgs {
+            .carritoBoton { 
+                position: relative;
+                top: 174px;
+                right: 134px;
+                height: 2vw;
+                border-radius: 10px;
+                border-color: nth($colores, 1);
+                font-family: $fontFamily;
+                font-size: 15px;
+                &:hover {
+                    background-color: $fontColorPrincipal;
+                    color: nth($colores, 2);
+                }
+                @media screen and (max-width: 400px) {
+                    width: 27vw;
+                    height: 10vw;
+                    font-size: 12px;   
+                }
+                @media screen and (min-width: 401px) and (max-width: 600px) {
+                    width: 35vw;
+                    height: 8vw;
+                }
+                @media screen and (min-width: 601px) and (max-width: 800px) {
+                    width: 15vw;
+                    height: 5vw;
+                }}}}} 
+.grid-subida {
+    @include gridSub(grid, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 40vh;
+    align-items: center;
+    @media screen and (max-width: 400px) {
+        height: auto;
+        margin-left: auto;    
+    }
+    @media screen and (min-width: 401px) and (max-width: 800px) {
+       height: auto; 
+    }
+    div {
+        @include gridSub(grid, repeat (2,auto));
+        row-gap: 10px;
+        justify-items: center;
+        @media screen and (max-width: 400px) {
+            row-gap: 1px;
+        }       
+        .subida {
+            width: 150px;
+            margin-top: 38px;
+            transition: all 1s;
+            &:hover {
+                transform: rotate(360deg) scale(1.5) translateY(-20px); 
+            }
+            @media screen and (max-width: 400px) {
+                width: 90px;    
+            }
+            @media screen and (min-width: 401px) and (max-width: 800px) {
+                width: 100px;
+            }
+        }
+        .formatos {
+            color: nth($colores, 2);
+            font-weight: bold;
+            text-align: center;
+            @media screen and (max-width: 400px) {
+                font-size: 12px;
+                color: nth($colores, 3);
+            }
+        }    
+    }
+    .archivo {
+        color: rgb(231, 231, 222);
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        font-style: italic;
+        &:hover {
+            color: $fontColorPrincipal;
+        }
+        @media screen and (max-width: 400px) {
+            margin-top: 72px;
+            font-size: 12px;    
+        }
+        @media screen and (min-width: 401px) and (max-width: 800px) {
+            font-size: 15px;
+            margin-bottom: 0;
+            margin-top: 48px;
+        }
+    }
+}
+/* Fin index */
